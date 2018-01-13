@@ -6,8 +6,17 @@ namespace Codewars_BuildTower
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void PrintStar_Input_1_Should_Be_1Star()
         {
+            Assert.AreEqual("*", Kata.PrintStar(1));
+        }
+    }
+
+    public class Kata
+    {
+        public static string PrintStar(int n)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
