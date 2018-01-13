@@ -33,7 +33,7 @@ namespace Codewars_BuildTower
         [TestMethod]
         public void Input_1_Should_Be_1star()
         {
-            Assert.AreEqual(new string[]{"*"},Kata.TowerBuilder(1));
+            Assert.AreEqual(new string[] { "*" }, Kata.TowerBuilder(1));
         }
     }
 
@@ -51,7 +51,7 @@ namespace Codewars_BuildTower
 
         public static string[] TowerBuilder(int n)
         {
-            throw new System.NotImplementedException();
+            return new string[] { PrintSpace(n) + PrintStar(n) + PrintSpace(n) };
         }
     }
 }
