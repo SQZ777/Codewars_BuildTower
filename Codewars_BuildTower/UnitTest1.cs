@@ -20,15 +20,21 @@ namespace Codewars_BuildTower
         }
 
         [TestMethod]
-        public void PrintSpace_Input_1_Should_Be_StringEmpty()
+        public void PrintSpace_Input_0_Should_Be_StringEmpty()
         {
-            Assert.AreEqual(string.Empty, Kata.PrintSpace(1));
+            Assert.AreEqual(string.Empty, Kata.PrintSpace(0));
+        }
+
+        [TestMethod]
+        public void PrintSpace_Input_1_Should_Be_1Space()
+        {
+            Assert.AreEqual(" ", Kata.PrintSpace(1));
         }
 
         [TestMethod]
         public void PrintSpace_Input_2_Should_Be_1Space()
         {
-            Assert.AreEqual(" ", Kata.PrintSpace(2));
+            Assert.AreEqual("  ", Kata.PrintSpace(2));
         }
 
         [TestMethod]
@@ -60,17 +66,12 @@ namespace Codewars_BuildTower
 
         public static string PrintSpace(int n)
         {
-            return string.Join("", Enumerable.Repeat(" ", n -1));
+            return string.Join("", Enumerable.Repeat(" ", n));
         }
 
         public static string[] TowerBuilder(int n)
         {
-            var result = new List<string>();
-            for (int i = 1; i <= n; i++)
-            {
-                result.Add(PrintSpace(n - i + 1) + PrintStar(i) + PrintSpace(n - i + 1));
-            }
-            return result.ToArray();
+            return Enumerable.Range(1, n).Select(x => PrintSpace(n - x) + PrintStar(x) + PrintSpace(n - x)).ToArray();
         }
     }
 }
