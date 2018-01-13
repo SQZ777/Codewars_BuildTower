@@ -21,7 +21,13 @@ namespace Codewars_BuildTower
         [TestMethod]
         public void PrintSpace_Input_1_Should_Be_StringEmpty()
         {
-            Assert.AreEqual(string.Empty,Kata.PrintSpace(1));
+            Assert.AreEqual(string.Empty, Kata.PrintSpace(1));
+        }
+
+        [TestMethod]
+        public void PrintSpace_Input_2_Should_Be_1Space()
+        {
+            Assert.AreEqual(" ", Kata.PrintSpace(2));
         }
     }
 
@@ -34,7 +40,7 @@ namespace Codewars_BuildTower
 
         public static string PrintSpace(int n)
         {
-            return string.Empty;
+            return string.Join("", Enumerable.Repeat(" ", n - 1));
         }
     }
 }
