@@ -34,7 +34,7 @@ namespace Codewars_BuildTower
 
         public static string PrintSpace(int n)
         {
-            throw new System.NotImplementedException();
+            return string.Empty;
         }
     }
 }
