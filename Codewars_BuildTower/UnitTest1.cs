@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -58,7 +59,12 @@ namespace Codewars_BuildTower
 
         public static string[] TowerBuilder(int n)
         {
-            return new string[] { PrintSpace(n) + PrintStar(n) + PrintSpace(n) };
+            var result = new List<string>();
+            for (int i = 1; i <= n; i++)
+            {
+                result.Add(PrintSpace(i) + PrintStar(i) + PrintSpace(i));
+            }
+            return result.ToArray();
         }
     }
 }
