@@ -43,6 +43,12 @@ namespace Codewars_BuildTower
             CollectionAssert.AreEqual(new string[]{"*"," *** "},Kata.TowerBuilder(2));
         }
 
+        [TestMethod]
+        public void Input_3_Should_Be_1starAnd3StarAnd5Star()
+        {
+            CollectionAssert.AreEqual(new string[]{"  *  "," *** ","*****"},Kata.TowerBuilder(3));
+        }
+
     }
 
     public class Kata
