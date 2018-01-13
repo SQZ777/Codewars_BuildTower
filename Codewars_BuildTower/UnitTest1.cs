@@ -40,13 +40,13 @@ namespace Codewars_BuildTower
         [TestMethod]
         public void Input_2_Should_Be_1starAnd3Star()
         {
-            CollectionAssert.AreEqual(new string[]{"*"," *** "},Kata.TowerBuilder(2));
+            CollectionAssert.AreEqual(new string[] { " * ", "***" }, Kata.TowerBuilder(2));
         }
 
         [TestMethod]
         public void Input_3_Should_Be_1starAnd3StarAnd5Star()
         {
-            CollectionAssert.AreEqual(new string[]{"  *  "," *** ","*****"},Kata.TowerBuilder(3));
+            CollectionAssert.AreEqual(new string[] { "  *  ", " *** ", "*****" }, Kata.TowerBuilder(3));
         }
 
     }
@@ -60,7 +60,7 @@ namespace Codewars_BuildTower
 
         public static string PrintSpace(int n)
         {
-            return string.Join("", Enumerable.Repeat(" ", n - 1));
+            return string.Join("", Enumerable.Repeat(" ", n -1));
         }
 
         public static string[] TowerBuilder(int n)
@@ -68,7 +68,7 @@ namespace Codewars_BuildTower
             var result = new List<string>();
             for (int i = 1; i <= n; i++)
             {
-                result.Add(PrintSpace(i) + PrintStar(i) + PrintSpace(i));
+                result.Add(PrintSpace(n - i + 1) + PrintStar(i) + PrintSpace(n - i + 1));
             }
             return result.ToArray();
         }
