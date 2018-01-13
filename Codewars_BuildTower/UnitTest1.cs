@@ -29,6 +29,12 @@ namespace Codewars_BuildTower
         {
             Assert.AreEqual(" ", Kata.PrintSpace(2));
         }
+
+        [TestMethod]
+        public void Input_1_Should_Be_1star()
+        {
+            Assert.AreEqual(new string[]{"*"},Kata.TowerBuilder(1));
+        }
     }
 
     public class Kata
@@ -41,6 +47,11 @@ namespace Codewars_BuildTower
         public static string PrintSpace(int n)
         {
             return string.Join("", Enumerable.Repeat(" ", n - 1));
+        }
+
+        public static string[] TowerBuilder(int n)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
