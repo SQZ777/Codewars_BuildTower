@@ -8,15 +8,15 @@ namespace Codewars_BuildTower
         [TestMethod]
         public void PrintStar_Input_1_Should_Be_1Star()
         {
-            Assert.AreEqual("*", Kata.PrintStar(1));
-        }
+            Assert.AreEqual(new string[] { "*" }, Kata.PrintStar(1));
     }
+}
 
-    public class Kata
+public class Kata
+{
+    public static string[] PrintStar(int n)
     {
-        public static string PrintStar(int n)
-        {
-            throw new System.NotImplementedException();
-        }
+        throw new System.NotImplementedException();
     }
+}
 }
