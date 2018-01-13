@@ -33,7 +33,7 @@ namespace Codewars_BuildTower
         [TestMethod]
         public void Input_1_Should_Be_1star()
         {
-            Assert.AreEqual(new string[] { "*" }, Kata.TowerBuilder(1));
+            CollectionAssert.AreEqual(new string[] { "*" }, Kata.TowerBuilder(1));
         }
     }
 
