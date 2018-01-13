@@ -16,7 +16,7 @@ namespace Codewars_BuildTower
     {
         public static string PrintStar(int n)
         {
-            throw new System.NotImplementedException();
+            return "*";
         }
     }
 }
